@@ -7,7 +7,7 @@ class Classroom(models.Model):
     credit = models.IntegerField()
 
     def __str__(self):
-        return f"{self.class_name} has {self.credit} credit"
+        return f"{self.class_name} has {self.credit} credit. ID: {self.id}"
 
 class Student(models.Model):
     first_name = models.CharField(max_length=20)
