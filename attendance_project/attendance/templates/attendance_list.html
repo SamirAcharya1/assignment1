@@ -78,13 +78,10 @@
     <!-- Date Selection -->
     <form method="get" class="mb-3 d-flex">
         <label for="date" class="me-2 fw-bold align-self-center">Select Date:</label>
-        <select name="date" class="form-select w-auto">
-            {% for date in available_dates %}
-                <option value="{{ date }}" {% if date == selected_date %}selected{% endif %}>
-                    {{ date }}
-                </option>
-            {% endfor %}
-        </select>
+        
+        <input type="date" name="date" id="date" class="form-control w-auto"
+               value="{{ selected_date|date:'Y-m-d' }}" required>  <!-- Format the date here -->
+
         <button type="submit" class="btn btn-primary ms-2">View</button>
     </form>
 
